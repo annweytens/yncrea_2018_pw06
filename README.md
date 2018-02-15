@@ -25,4 +25,4 @@ Did you notice that the "core" module is not present? Build it by yourself ;) Th
 * a `POST` call on `http://localhost:8080/pw06-web/api/calevents/` will save a new event in the database, based on the JSON content of the request 
 
 # The GUI
-It is available at the following URL : `http://localhost:8080/pw06-web/web/`
+It is available at the following URL : `http://localhost:8080/pw06-web/`
