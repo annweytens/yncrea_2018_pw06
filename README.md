@@ -26,3 +26,6 @@ Did you notice that the "core" module is not present? Build it by yourself ;) Th
 
 # The GUI
 It is available at the following URL : `http://localhost:8080/pw06-web/`
+
+# Tips
+* The `RestController` interface must be implemented at least once!
