@@ -1,4 +1,4 @@
-function CalendarCtrl($scope,$compile,uiCalendarConfig,EvenementsWS) {
+function CalendarCtrl($scope,$compile,uiCalendarConfig,CalEventsWS) {
 
     var date = new Date();
     var d = date.getDate();
@@ -75,7 +75,7 @@ function CalendarCtrl($scope,$compile,uiCalendarConfig,EvenementsWS) {
         }
     };
     $scope.addEvent = function() {
-        var eventToAdd = new EvenementsWS();
+        var eventToAdd = new CalEventsWS();
         eventToAdd.title = $scope.title;
         eventToAdd.description = $scope.description;
         eventToAdd.start = moment($scope.start, "DD-MM-YYYY HH:mm").unix() * 1000;
@@ -150,7 +150,7 @@ function CalendarCtrl($scope,$compile,uiCalendarConfig,EvenementsWS) {
         timezone:'local',
         eventClick:function(event, allDay, jsEvent, view){
         	console.log(event);
-        	EvenementsWS.get({id:event.id}).$promise.then(function(data){
+        	CalEventsWS.get({id:event.id}).$promise.then(function(data){
         		var modalInstance = $modal.open({
         		      templateUrl: 'myModalContent.html',
         		      controller: 'ModalInstanceCtrl',
@@ -169,14 +169,14 @@ function CalendarCtrl($scope,$compile,uiCalendarConfig,EvenementsWS) {
     };
     
     
-    $scope.events = [EvenementsWS.query()];
+    $scope.events = [CalEventsWS.query()];
     $scope.renderCalender = function(calendar) {
         calendar.fullCalendar('render');
       };
     
 
     $scope.addEvent = function() {
-    	var eventToAdd = new EvenementsWS();
+    	var eventToAdd = new CalEventsWS();
     	eventToAdd.title = $scope.title;
     	eventToAdd.description = $scope.description;
     	eventToAdd.start = moment($scope.start,"DD-MM-YYYY HH:mm").unix()*1000;
