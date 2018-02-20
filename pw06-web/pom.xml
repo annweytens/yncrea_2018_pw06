@@ -47,6 +47,12 @@
 			<version>2.8.6</version>
 		</dependency>
 
+        <dependency>
+            <groupId>yncrea.2018</groupId>
+            <artifactId>pw06-core</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
 
-	</dependencies>
+
+    </dependencies>
 </project>

@@ -10,6 +10,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.ImportResource;
 
+
 import javax.inject.Inject;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -42,4 +43,10 @@ public class WSConfig {
     public JacksonJsonProvider jsonProvider() {
         return new JacksonJsonProvider();
     }
+
+
+
+
+
+
 }
